@@ -1,0 +1,117 @@
+<div class="container text-center">
+    <h1>{{title}}</h1>
+
+    <div class="search-corona">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a statewise corona update">
+        <button class="btn btn-danger btn-block" (click)="downloadPDF()">Download PDF</button>
+    </div>
+</div>
+
+
+<table class="table-center  table-striped">
+
+
+    <mat-accordion>
+        <thead>
+
+            <span>Updated</span>
+            <span>State</span>
+            <span>Cases</span>
+
+        </thead>
+
+
+        <tbody>
+
+
+            <tr *ngFor="let corona of statewise | filter:searchText">
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+
+
+                        <td style="width: 35%;">{{corona.lastupdatedtime }}</td>
+                        <td style="width: 30%;">{{corona.state}}</td>
+                        <td style="width: 15%;">{{corona.confirmed}}</td>
+
+
+
+
+                    </mat-expansion-panel-header>
+
+                    <table class="exp-table">
+                        <tr>
+                            <th>Last Updated</th>
+                            <td>{{corona.lastupdatedtime}}</td>
+                        </tr>
+                        <tr>
+                            <th>State</th>
+                            <td>{{corona.state}}</td>
+                        </tr>
+                        <tr>
+                            <th>New Cases</th>
+                            <td>{{corona.deltaconfirmed}}</td>
+                        </tr>
+                        <tr>
+                            <th>New Deaths</th>
+                            <td>{{corona.deltadeaths}}</td>
+                        </tr>
+                        <tr>
+                            <th>New Recovery</th>
+                            <td>{{corona.deltarecovered}}</td>
+                        </tr>
+                        <tr>
+                            <th>Total Recovery</th>
+                            <td>{{corona.recovered}}</td>
+                        </tr>
+                        <tr>
+                            <th>Active Cases</th>
+                            <td>{{corona.active}}</td>
+                        </tr>
+                        <tr>
+                            <th>Total Cases</th>
+                            <td>{{corona.confirmed}}</td>
+                        </tr>
+
+                    </table>
+                </mat-expansion-panel>
+
+
+
+            </tr>
+
+
+        </tbody>
+    </mat-accordion>
+</table>
+
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-8" id="htmlData" #htmlData>
+            <table class="table-hide table-bordered">
+                <tr class="table-primary">
+                    <th>Updated</th>
+                    <th>State</th>
+                    <th>Total</th>
+                    <th>Active</th>
+                    <th>New Case</th>
+                    <th>Recover</th>
+                    <th>Death</th>
+                </tr>
+                <tr *ngFor="let corona of statewise">
+                    <td>{{corona.lastupdatedtime }}</td>
+                    <td>{{corona.state}}</td>
+                    <td>{{corona.confirmed}}</td>
+                    <td>{{corona.active}}</td>
+                    <td>{{corona.deltaconfirmed}}</td>
+                    <td>{{corona.recovered}}</td>
+                    <td>{{corona.deaths}}</td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+@media only screen and (min-width: 600px) {
+    .chart {
+        width: 50%;
+        margin-right: 25%;
+        margin-left: 25%;
+    }
+}
+
+.chart {
+    margin-top: 2%;
+}
+
+.row {
+    width: 300px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row h3 {
+    color: rgb(52, 124, 226);
+    font-size: x-large;
+    font-family: 'Metal Mania', cursive;
+}

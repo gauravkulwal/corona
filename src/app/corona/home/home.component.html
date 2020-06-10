@@ -1,0 +1,21 @@
+<div class="container backimg">
+    <div class="row ">
+        <h3>Last 7 days India's Trends..</h3>
+    </div>
+    <div class="chart">
+        <div style="display: block">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType">
+      </canvas>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="chart">
+        <div style="display: block">
+            <canvas baseChart [datasets]="barChartData2" [labels]="barChartLabels2" [options]="barChartOptions" [legend]="barChartLegend2" [chartType]="barChartType2">
+    </canvas>
+        </div>
+    </div>
+
+</div>

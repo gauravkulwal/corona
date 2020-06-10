@@ -1,0 +1,34 @@
+.form-group {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+container {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin-top: 10%;
+}
+
+label {
+    color: rgb(52, 124, 226);
+    font-size: large;
+}
+
+.title {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5%;
+    font-family: 'Metal Mania', cursive;
+    font-size: x-large;
+}
+
+img {
+    width: 50%;
+    height: 150px;
+    margin-left: 25%;
+    margin-right: 25%;
+}

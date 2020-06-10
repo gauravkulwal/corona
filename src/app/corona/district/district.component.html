@@ -1,0 +1,76 @@
+<!-- <div class="container">
+    <div class="row">
+        <select class='select-option' [(ngModel)]="stateName" (change)='onOptionsSelected($event)'>
+   <option class='option'  *ngFor='let option of state'
+   [value]="option">{{option}}</option>
+</select>
+    </div>
+</div>
+<br> -->
+
+
+
+<div class="container">
+    <div class="row">
+        <label class="title" for="">Search DistrictWise Corona..</label>
+
+        <div class="form-group">
+            <label for="sel1">Select State (select one):</label>
+            <select class="form-control select-option" [(ngModel)]="stateName" (change)='onOptionsSelected($event)'>
+          <option class='option'  *ngFor='let option of sService.state'
+     [value]="option">{{option}}</option>
+        </select>
+            <br>
+            <label for="sel2">Select District</label>
+            <select class="form-control" [(ngModel)]="distName" (change)='onOptionsSelecteddistrict($event)'>
+          <option class='option'  *ngFor='let district of districtName'
+     [value]="district">{{district}}</option>
+        </select>
+        </div>
+
+    </div>
+    <div class="row" [hidden]="!distName">
+
+
+        <table class="table table-info table-striped form-group">
+            <thead>
+                <tr>
+                    <th>District</th>
+                    <th>{{distName}}</th>
+                </tr>
+            </thead>
+            <tr>
+                <th>Total Case</th>
+                <td>{{finalArrayConfirmed}}</td>
+            </tr>
+            <tr>
+                <th>Active</th>
+                <td>{{finalArrayActive}}</td>
+            </tr>
+            <tr>
+                <th>Total-Death</th>
+                <td>{{finalArrayDeceased}}</td>
+            </tr>
+            <tr>
+                <th>Total Recovered</th>
+                <td>{{finalArrayRecovered}}</td>
+            </tr>
+            <tr>
+                <th>New Case</th>
+                <td>{{finalArrayDeltaConfirmed}}</td>
+            </tr>
+            <tr>
+                <th>New Death</th>
+                <td>{{finalArrayDeltaDaeceased}}</td>
+            </tr>
+            <tr>
+                <th>New Recovered</th>
+                <td>{{finalArrayDeltaRecovered}}</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <img [hidden]="distName" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/India_Map_And_Flag_Combined_By_Devilal.svg" alt="indiamap">
+</div>
