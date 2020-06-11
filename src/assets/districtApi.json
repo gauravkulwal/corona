@@ -125,7 +125,7 @@
             ]
         },
         {
-            "state": "Chandigarh (UT)",
+            "state": "Chandigarh",
             "districts": [
                 "Chandigarh"
             ]
@@ -163,7 +163,7 @@
             ]
         },
         {
-            "state": "Dadra and Nagar Haveli (UT)",
+            "state": "Dadra and Nagar Haveli and Daman and Diu",
             "districts": [
                 "Dadra & Nagar Haveli"
             ]
@@ -176,7 +176,7 @@
             ]
         },
         {
-            "state": "Delhi (NCT)",
+            "state": "Delhi",
             "districts": [
                 "Central Delhi",
                 "East Delhi",
