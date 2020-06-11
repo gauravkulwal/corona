@@ -162,7 +162,16 @@
                 "Surguja"
             ]
         },
-      
+        {
+            "state": "Dadra and Nagar Haveli and Daman and Diu",
+            "districts": [
+                "Dadra and Nagar Haveli",
+                 "Daman",
+                "Diu"
+
+            ]
+        },
+       
         {
             "state": "Delhi",
             "districts": [
